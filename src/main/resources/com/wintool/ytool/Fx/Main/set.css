@@ -1,0 +1,35 @@
+.set_pane{
+    -fx-border-color: rgba(167, 167, 167, 0.78);
+    -fx-border-width: 5;
+}
+.set_image_ok_no{
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+    -fx-border-width: 2;
+    -fx-border-color: azure;
+    -fx-text-fill: azure;
+    -fx-background-color: #39393999;
+}
+.set_image_ok_no:hover{
+    -fx-border-color: #393939;
+    -fx-background-color: #6a4acd;
+}
+.set_image_ok_no:armed{
+    -fx-border-color: azure;
+    -fx-text-fill: azure;
+    -fx-background-color: #39393999;
+}
+
+.set_main_image {
+    -fx-border-color: azure;
+    -fx-border-radius: 20;
+    -fx-border-width: 2;
+}
+.start_app {
+    -fx-border-width: 2;
+    -fx-border-radius: 5;
+    -fx-border-color: azure;
+}
+.start_app:hover{
+    -fx-border-color: #6a4acd;
+}

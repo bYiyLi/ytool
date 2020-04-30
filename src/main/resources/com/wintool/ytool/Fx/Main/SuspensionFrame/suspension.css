@@ -1,0 +1,14 @@
+.suspension{
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+    -fx-border-width: 5;
+    -fx-border-color: #39393900;
+    -fx-border-color: rgba(57, 57, 57, 0);
+}
+.suspension:hover{
+    -fx-background-color: rgba(222, 25, 25, 0);
+    -fx-border-color: rgb(106, 105, 105);
+}
+.rectangle {
+
+}

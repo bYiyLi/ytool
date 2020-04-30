@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<AnchorPane fx:id="root" minHeight="20" minWidth="20" onMouseDragEntered="#onClick" prefHeight="100.0" prefWidth="100.0" styleClass="suspension" stylesheets="@suspension.css" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.wintool.ytool.Fx.Main.SuspensionFrame.SuspensionController">
+    <Rectangle fx:id="rectangle" arcHeight="20" arcWidth="20" height="100" layoutX="0" layoutY="0" styleClass="rectangle" width="100">
+    </Rectangle>
+</AnchorPane>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane fx:id="root" centerShape="false" focusTraversable="true" maxHeight="309" maxWidth="500" minHeight="309" minWidth="500" scaleShape="false" stylesheets="@home.css" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.wintool.ytool.Fx.Main.Controller">
+   <Pane fx:id="main" prefHeight="309.0" prefWidth="500.0">
+      <children>
+         <ImageView fx:id="mainBg" fitHeight="309" fitWidth="500" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@bg.png" />
+            </image></ImageView>
+         <Button fx:id="exit" mnemonicParsing="false" styleClass="exit_button" stylesheets="@home.css" text="X" textAlignment="CENTER">
+            <font>
+               <Font size="9.0" />
+            </font>
+         </Button>
+      </children>
+   </Pane>
+   <AnchorPane fx:id="appPane" layoutX="-380" layoutY="25" maxHeight="270" maxWidth="400" minHeight="270" minWidth="400" prefHeight="270.0" prefWidth="400.0" styleClass="app_pan" stylesheets="@app.css">
+      <children>
+         <ImageView fx:id="appPaneBg" fitHeight="270.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true">
+         </ImageView>
+         <GridPane fx:id="appGrid" maxHeight="270" maxWidth="400" minHeight="270" minWidth="400" prefHeight="270.0" prefWidth="400.0" stylesheets="@app.css">
+           <columnConstraints>
+               <ColumnConstraints hgrow="SOMETIMES" maxWidth="100" minWidth="100.0" prefWidth="100.0" />
+               <ColumnConstraints hgrow="SOMETIMES" maxWidth="100" minWidth="100.0" prefWidth="100.0" />
+               <ColumnConstraints hgrow="SOMETIMES" maxWidth="100" minWidth="100.0" prefWidth="100.0" />
+               <ColumnConstraints hgrow="SOMETIMES" maxWidth="100" minWidth="100.0" prefWidth="100.0" />
+           </columnConstraints>
+           <rowConstraints>
+             <RowConstraints minHeight="90.0" prefHeight="90.0" vgrow="SOMETIMES" />
+             <RowConstraints minHeight="90.0" prefHeight="90.0" vgrow="SOMETIMES" />
+             <RowConstraints minHeight="90.0" prefHeight="90.0" vgrow="SOMETIMES" />
+           </rowConstraints>
+         </GridPane>
+      </children>
+   </AnchorPane>
+   <Pane fx:id="setPane" prefHeight="309.0" prefWidth="500.0" styleClass="set_pane" stylesheets="@set.css" visible="false">
+      <children>
+         <ImageView fx:id="setPaneBg" pickOnBounds="true" preserveRatio="true" />
+         <Label layoutX="250.0" layoutY="53.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="163.0" prefWidth="184.0" text="将背景图移动进左窗口就可以设置背景。。。" textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
+            <font>
+               <Font size="26.0" />
+            </font>
+         </Label>
+         <CheckBox fx:id="startUpCheckBox" layoutX="45.0" layoutY="266.0" mnemonicParsing="false" style="-fx-background-radius: #6a4acd;" styleClass="start_app" stylesheets="@set.css" text="开机启动" textFill="#f5ecec" />
+          <CheckBox fx:id="suspensionCheckBox" layoutX="309.0" layoutY="266.0" mnemonicParsing="false" style="-fx-background-radius: #6a4acd;" styleClass="start_app" stylesheets="@set.css" text="悬浮框" textFill="#f5ecec" />
+          <Pane fx:id="setMainBgPane" layoutX="12.0" layoutY="53.0" prefHeight="163.0" prefWidth="218.0" styleClass="set_main_image">
+             <ImageView fx:id="setMainBg" fitHeight="143.0" fitWidth="198.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" />
+         </Pane>
+         <Button fx:id="setImageOk" layoutX="45.0" layoutY="223.0" mnemonicParsing="false" onAction="#setBgOkAction" styleClass="set_image_ok_no" stylesheets="@set.css" text="确认" visible="false" />
+         <Button fx:id="setImageNo" layoutX="141.0" layoutY="223.0" mnemonicParsing="false" onAction="#setBgNoAction" prefHeight="28.0" prefWidth="48.0" styleClass="set_image_ok_no" stylesheets="@set.css" text="取消" visible="false" />
+      </children>
+   </Pane>
+   <Button fx:id="set" contentDisplay="CENTER" styleClass="set_button">
+      <graphic>
+         <ImageView fitHeight="40" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@set.png" />
+            </image></ImageView>
+      </graphic>
+   </Button>
+
+ </Pane>
