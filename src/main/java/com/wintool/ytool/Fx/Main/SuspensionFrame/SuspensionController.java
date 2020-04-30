@@ -30,8 +30,6 @@ public class SuspensionController implements Initializable {
     Timeline timeline = new Timeline();
     Random r = new Random();
     Duration loopTime = Duration.millis(1000);//渐变色变化周期
-
-
     public AnchorPane root;
     private Stage stage;
     private double xOffset = 0;
@@ -126,6 +124,19 @@ public class SuspensionController implements Initializable {
             stage.setX(event.getScreenX() - xOffset);
             stage.setY(event.getScreenY() - yOffset);
         });
+        root.setOnMouseClicked(mouseEvent -> {
+            var stage=getStage();
+            try {
+                if (mouseEvent.getClickCount()>1){
+                    new StageListController().showUi(stage,stage.getX(),stage.getY());
+                    if (stage.isShowing()){
+                        stage.close();
+                    }
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        });
         root.setOnMouseEntered(mouseEvent -> {
             getStage().setMaxWidth(100);
             getStage().setMaxHeight(100);
@@ -144,9 +155,5 @@ public class SuspensionController implements Initializable {
             stage = (Stage) root.getScene().getWindow();
         }
         return stage;
-    }
-
-    public void onClick(ActionEvent actionEvent) {
-        System.out.println("aa");
     }
 }

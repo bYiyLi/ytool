@@ -9,7 +9,7 @@ public class StageManage {
     private final Map<String, Stage> stageMap;
     private final static StageManage stageManage=new StageManage();
     private StageManage(){
-        this.stageMap=new HashMap<>();
+        stageMap=new HashMap<>();
     }
     public static StageManage getStageManage() {
         return stageManage;
@@ -23,5 +23,9 @@ public class StageManage {
         }else {
             return stage;
         }
+    }
+
+    public Map<String, Stage> getStageMap() {
+        return stageMap;
     }
 }
