@@ -12,3 +12,29 @@
 .rectangle {
 
 }
+.stage_item {
+    -fx-border-width: 5;
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+    -fx-background-color: #4c4c4c;
+    -fx-border-color: #4c4c4c;
+    -fx-text-fill: azure;
+    -fx-min-width: 80;
+    -fx-max-width: 80;
+    -fx-min-height: 30;
+}
+.stage_item:hover{
+    -fx-border-color: #6a4acd;
+}
+.stage_item:selected{
+    -fx-text-fill: #4c4c4c;
+    -fx-border-color: #4d81ff;
+    -fx-background-color: #4d81ff;
+}
+
+.list_root {
+    -fx-border-color: azure;
+    -fx-border-width: 5;
+    -fx-border-radius: 20;
+    -fx-background-color: rgba(57, 57, 57, 0);
+}

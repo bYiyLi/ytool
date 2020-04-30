@@ -1,11 +1,13 @@
 package com.wintool.ytool.Fx.Main.SuspensionFrame;
 
+import com.sun.prism.shader.Solid_TextureYV12_AlphaTest_Loader;
 import com.wintool.ytool.Fx.StageManage;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ToggleButton;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
@@ -23,7 +25,6 @@ public class StageListController implements Initializable {
     private static double X;
     private static double Y;
     public VBox box;
-
     public void showUi(Stage parent,double x, double y) throws IOException {
         X=x;
         Y=y;
@@ -52,8 +53,26 @@ public class StageListController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         root.setOnMouseExited(this::closeUi);
         StageManage.getStageManage().getStageMap().forEach((index,item)->{
-
+            ToggleButton button=new ToggleButton(index);
+            button.getStylesheets().add("com/wintool/ytool/Fx/Main/SuspensionFrame/suspension.css");
+            button.getStyleClass().add("stage_item");
+            button.setSelected(item.isShowing());
+            if (!index.equalsIgnoreCase("窗口列表")&&!index.equalsIgnoreCase("悬浮框")){
+                box.getChildren().add(button);
+            }
+            button.setOnMouseClicked(mouseEvent -> {
+                if (button.isSelected()){
+                    if (!item.isShowing()){
+                        item.show();
+                    }
+                }else {
+                    if (item.isShowing()){
+                        item.close();
+                    }
+                }
+            });
         });
+
     }
 
     private void closeUi(MouseEvent mouseEvent) {
