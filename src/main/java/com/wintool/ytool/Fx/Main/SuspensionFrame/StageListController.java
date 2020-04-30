@@ -1,12 +1,10 @@
 package com.wintool.ytool.Fx.Main.SuspensionFrame;
 
-import com.sun.prism.shader.Solid_TextureYV12_AlphaTest_Loader;
 import com.wintool.ytool.Fx.StageManage;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.control.ToggleButton;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;

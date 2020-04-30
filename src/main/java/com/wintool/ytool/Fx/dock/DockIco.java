@@ -1,4 +1,4 @@
-package com.wintool.ytool.Fx.suspensionFrame;
+package com.wintool.ytool.Fx.dock;
 
 import javafx.animation.Animation;
 import javafx.animation.Interpolator;
@@ -14,7 +14,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public  class IcoSufr implements Initializable {
+public  class DockIco implements Initializable {
     public ImageView ico;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -29,6 +29,6 @@ public  class IcoSufr implements Initializable {
         System.out.println("a");
     };
     public static Parent getApp() throws IOException {
-        return FXMLLoader.load(IcoSufr.class.getResource("ico_sufr.fxml"));
+        return FXMLLoader.load(DockIco.class.getResource("dock_ico.fxml"));
     }
 }

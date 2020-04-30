@@ -1,7 +1,7 @@
 package com.wintool.ytool.Fx.Main;
 
 import com.wintool.ytool.Fx.Main.SuspensionFrame.SuspensionController;
-import com.wintool.ytool.Fx.suspensionFrame.IcoSufr;
+import com.wintool.ytool.Fx.dock.DockIco;
 import javafx.animation.Animation;
 import javafx.animation.Interpolator;
 import javafx.animation.RotateTransition;
@@ -229,7 +229,7 @@ public class Controller implements Initializable {
     }
     public void initApp(){
         try {
-            appGrid.add(IcoSufr.getApp(),1,1);
+            appGrid.add(DockIco.getApp(),1,1);
         } catch (IOException e) {
             e.printStackTrace();
         }

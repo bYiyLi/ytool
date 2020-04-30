@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="90" maxWidth="100" minHeight="90" minWidth="100" prefHeight="90.0" prefWidth="100.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.wintool.ytool.Fx.dock.DockIco">
+   <ImageView fx:id="ico" fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="10.0">
+      <image>
+         <Image url="@set.png" />
+      </image>
+   </ImageView>
+   <Button alignment="BOTTOM_CENTER" layoutX="5.0" layoutY="5.0" maxHeight="80" maxWidth="90" minHeight="80" minWidth="90" onAction="#StartApp" prefHeight="80" prefWidth="90.0" styleClass="app_item" stylesheets="@app.css" text="dock" textAlignment="JUSTIFY" textFill="#ffffffb7">
+    </Button>
+</AnchorPane>
