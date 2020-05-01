@@ -2,6 +2,6 @@
 
 <?import javafx.scene.layout.*?>
 
-<AnchorPane fx:id="root" minHeight="60" prefWidth="100.0" styleClass="list_root" stylesheets="@suspension.css" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.wintool.ytool.Fx.Main.SuspensionFrame.StageListController">
+<AnchorPane fx:id="root" minHeight="60" onMouseExited="#closeUi" prefWidth="100.0" styleClass="list_root" stylesheets="@suspension.css" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.wintool.ytool.Fx.Main.SuspensionFrame.StageListController">
    <VBox fx:id="box" layoutX="10" layoutY="10" prefWidth="80" spacing="5.0" />
 </AnchorPane>

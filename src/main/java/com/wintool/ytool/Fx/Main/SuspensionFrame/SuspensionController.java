@@ -51,6 +51,8 @@ public class SuspensionController implements Initializable {
             stage= StageManage.getStageManage().getStage("悬浮框");
             stage.initStyle(StageStyle.TRANSPARENT);
         }
+        stage.setHeight(100);
+        stage.setWidth(100);
         if (stage.isShowing()){
             return;
         }

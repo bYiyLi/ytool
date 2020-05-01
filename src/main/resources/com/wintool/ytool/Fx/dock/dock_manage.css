@@ -1,0 +1,19 @@
+.exit_button{
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-width: 3;
+    -fx-text-fill: rgba(53, 160, 241, 0.7);
+    -fx-border-color: rgba(53, 160, 241, 0.7);
+    -fx-background-color: rgba(255, 255, 255,0);
+    -fx-max-width: 25;
+    -fx-max-height: 25;
+    -fx-min-height: 25;
+    -fx-min-width: 25;
+    -fx-translate-y: 10;
+    -fx-translate-x: 463;
+}
+.exit_button:hover{
+    -fx-border-color: rgba(255, 255, 255,0);
+    -fx-background-color: rgba(53, 160, 241, 0.7);
+    -fx-text-fill: aliceblue;
+}

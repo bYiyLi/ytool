@@ -26,7 +26,11 @@ public  class DockIco implements Initializable {
         rt.play();  // 开始播放动画
     }
     public  void StartApp(ActionEvent actionEvent){
-        System.out.println("a");
+        try {
+            DockManage.showUi();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     };
     public static Parent getApp() throws IOException {
         return FXMLLoader.load(DockIco.class.getResource("dock_ico.fxml"));

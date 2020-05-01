@@ -119,12 +119,16 @@ public class Controller implements Initializable {
             }
         });
         exit.setOnAction(actionEvent -> {
-            var stage = getStage();
+            if (stage==null){
+                stage = getStage();
+            }
             stage.close();
         });
         root.setOnMouseDragged(event -> {
             event.consume();
-            var stage = getStage();
+            if (stage==null){
+                stage = getStage();
+            }
             stage.setX(event.getScreenX() - xOffset);
             stage.setY(event.getScreenY() - yOffset);
         });
