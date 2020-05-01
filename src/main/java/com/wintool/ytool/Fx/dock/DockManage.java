@@ -1,35 +1,38 @@
 package com.wintool.ytool.Fx.dock;
-
 import com.wintool.ytool.Fx.StageManage;
+import javafx.collections.ObservableMap;
 import javafx.embed.swing.SwingFXUtils;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Slider;
+import javafx.scene.control.ToggleButton;
+import javafx.scene.control.ToggleGroup;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.image.WritableImage;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import org.springframework.core.io.ClassPathResource;
-
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
-
 public class DockManage implements Initializable {
-
+    private double xOffset = 0;
+    private double yOffset = 0;
     public AnchorPane root;
     private static Stage stage;
     public Button exit;
     public ImageView mainBg;
-    private double xOffset = 0;
-    private double yOffset = 0;
+    public Slider size;
+    public Slider h;
+    public Slider rl;
+    public ToggleGroup toggleGroup;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         root.setOnMouseDragged(event -> {
@@ -64,6 +67,9 @@ public class DockManage implements Initializable {
             } catch (IOException e) {
                 e.printStackTrace();
             }
+        });
+        toggleGroup.selectedToggleProperty().addListener((observableValue, toggle, t1) -> {
+
         });
     }
     public static void showUi() throws IOException {

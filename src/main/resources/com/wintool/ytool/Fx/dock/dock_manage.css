@@ -17,3 +17,26 @@
     -fx-background-color: rgba(53, 160, 241, 0.7);
     -fx-text-fill: aliceblue;
 }
+.table_title{
+    -fx-background-color: #393939;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-width: 2;
+    -fx-border-color: #c6c6c6;
+}
+.udlr {
+    -fx-border-width: 5;
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+    -fx-background-color: #4c4c4c;
+    -fx-border-color: #4c4c4c;
+    -fx-text-fill: azure;
+}
+.udlr:hover{
+    -fx-border-color: #6a4acd;
+}
+.udlr:selected{
+    -fx-text-fill: #4c4c4c;
+    -fx-border-color: #4d81ff;
+    -fx-background-color: #4d81ff;
+}
