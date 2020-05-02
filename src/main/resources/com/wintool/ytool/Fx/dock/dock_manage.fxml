@@ -7,19 +7,21 @@
 
 <AnchorPane fx:id="root" maxHeight="309" maxWidth="500" minHeight="221.0" minWidth="311.0" prefHeight="221.0" prefWidth="311.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.wintool.ytool.Fx.dock.DockManage">
     <ImageView fx:id="mainBg" fitHeight="221.0" fitWidth="311.0" pickOnBounds="true" preserveRatio="true">
-    </ImageView>
+      <image>
+         <Image url="@../Main/bg.png" />
+      </image></ImageView>
     <Button fx:id="exit" layoutX="-201.0" layoutY="4.0" mnemonicParsing="false" styleClass="exit_button" stylesheets="@dock_manage.css" text="X" textAlignment="CENTER">
         <font>
             <Font size="9.0" />
         </font>
     </Button>
-   <ToggleButton layoutX="110.0" layoutY="20.0" mnemonicParsing="false" styleClass="udlr" stylesheets="@dock_manage.css" text="上">
+   <ToggleButton layoutX="110.0" layoutY="20.0" mnemonicParsing="false" onAction="#upDock" styleClass="udlr" stylesheets="@dock_manage.css" text="上">
       <toggleGroup>
          <ToggleGroup fx:id="toggleGroup" />
       </toggleGroup></ToggleButton>
-   <ToggleButton layoutX="110.0" layoutY="114.0" mnemonicParsing="false" styleClass="udlr" stylesheets="@dock_manage.css" text="下" toggleGroup="$toggleGroup" />
-   <ToggleButton layoutX="46.0" layoutY="71.0" mnemonicParsing="false" styleClass="udlr" stylesheets="@dock_manage.css" text="左" toggleGroup="$toggleGroup" />
-   <ToggleButton layoutX="179.0" layoutY="71.0" mnemonicParsing="false" styleClass="udlr" stylesheets="@dock_manage.css" text="右" toggleGroup="$toggleGroup" />
+   <ToggleButton layoutX="110.0" layoutY="114.0" mnemonicParsing="false" onAction="#downDock" styleClass="udlr" stylesheets="@dock_manage.css" text="下" toggleGroup="$toggleGroup" />
+   <ToggleButton layoutX="46.0" layoutY="71.0" mnemonicParsing="false" onAction="#leftDock" styleClass="udlr" stylesheets="@dock_manage.css" text="左" toggleGroup="$toggleGroup" />
+   <ToggleButton layoutX="179.0" layoutY="71.0" mnemonicParsing="false" onAction="#rightDock" styleClass="udlr" stylesheets="@dock_manage.css" text="右" toggleGroup="$toggleGroup" />
    <Slider fx:id="h" layoutX="107.0" layoutY="187.0" prefHeight="16.0" prefWidth="122.0" />
    <Slider fx:id="size" layoutX="267.0" layoutY="51.0" orientation="VERTICAL" prefHeight="119.0" prefWidth="16.0" value="50.0" />
    <Label layoutX="89.0" layoutY="74.0" styleClass="table_title" stylesheets="@dock_manage.css" text="显示位置" textAlignment="JUSTIFY" textFill="#cdcbcb">

@@ -1,14 +1,14 @@
 package com.wintool.ytool.Fx.dock;
 import com.wintool.ytool.Fx.StageManage;
-import javafx.collections.ObservableMap;
 import javafx.embed.swing.SwingFXUtils;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Slider;
-import javafx.scene.control.ToggleButton;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -68,10 +68,17 @@ public class DockManage implements Initializable {
                 e.printStackTrace();
             }
         });
-        toggleGroup.selectedToggleProperty().addListener((observableValue, toggle, t1) -> {
-
+        size.valueProperty().addListener((observableValue, aBoolean, t1) -> {
+            System.out.println(size.getValue());
+        });
+        rl.valueProperty().addListener((observableValue, aBoolean, t1) -> {
+            System.out.println(rl.getValue());
+        });
+        h.valueProperty().addListener((observableValue, aBoolean, t1) -> {
+            System.out.println(h.getValue());
         });
     }
+
     public static void showUi() throws IOException {
         if (stage==null){
             stage= StageManage.getStageManage().getStage("DockManage");
@@ -90,5 +97,21 @@ public class DockManage implements Initializable {
             stage = (Stage) root.getScene().getWindow();
         }
         return stage;
+    }
+    @FXML
+    public void upDock(ActionEvent actionEvent) {
+
+    }
+    @FXML
+    public void downDock(ActionEvent actionEvent) {
+
+    }
+    @FXML
+    public void leftDock(ActionEvent actionEvent) {
+
+    }
+    @FXML
+    public void rightDock(ActionEvent actionEvent) {
+
     }
 }
