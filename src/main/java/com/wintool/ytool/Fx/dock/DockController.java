@@ -14,7 +14,6 @@ import java.util.ResourceBundle;
 public class DockController implements Initializable {
     private static Stage stage;
     public AnchorPane root;
-
     public void showUi() throws IOException {
         if (stage==null){
             stage= StageManage.getStageManage().getStage("-dockMain");
