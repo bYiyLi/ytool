@@ -81,7 +81,7 @@ public class DockManage implements Initializable {
 
     public static void showUi() throws IOException {
         if (stage==null){
-            stage= StageManage.getStageManage().getStage("DockManage");
+            stage= StageManage.getStageManage().getStage("Dock管理");
             Parent root = FXMLLoader.load(DockManage.class.getResource("dock_manage.fxml"));
             Scene scene = new Scene(root);
             scene.setFill(null);

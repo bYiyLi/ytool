@@ -30,7 +30,7 @@ public class StageListController implements Initializable {
         Y=y;
         StageListController.parent=parent;
         if (stage==null){
-            stage= StageManage.getStageManage().getStage("窗口列表");
+            stage= StageManage.getStageManage().getStage("-窗口列表");
             stage.initStyle(StageStyle.TRANSPARENT);
             Parent root = FXMLLoader.load(StageListController.class.getResource("stage_list.fxml"));
             Scene scene = new Scene(root);
@@ -59,7 +59,7 @@ public class StageListController implements Initializable {
                 button.getStylesheets().add("com/wintool/ytool/Fx/Main/SuspensionFrame/suspension.css");
                 button.getStyleClass().add("stage_item");
                 button.setSelected(item.isShowing());
-                if (!index.equalsIgnoreCase("窗口列表")&&!index.equalsIgnoreCase("悬浮框")){
+                if (index.charAt(0)!='-'){
                     box.getChildren().add(button);
                 }
                 button.setOnMouseClicked(mouseEvent -> {

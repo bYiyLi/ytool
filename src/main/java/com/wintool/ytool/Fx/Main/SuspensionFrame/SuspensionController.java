@@ -48,7 +48,7 @@ public class SuspensionController implements Initializable {
     }
     public void showUi() throws IOException {
         if (stage==null){
-            stage= StageManage.getStageManage().getStage("悬浮框");
+            stage= StageManage.getStageManage().getStage("-悬浮框");
             stage.initStyle(StageStyle.TRANSPARENT);
         }
         stage.setHeight(100);
